@@ -2,11 +2,7 @@
     <div class="container">
         <a href="/" class="navbar-brand">
             <div class="d-flex align-items-center logo_image">
-                Logo
-                {{-- <picture>
-                    <source srcset="{{ config('websiteInfo')->getImage('logoImage', true) }}?v={{ formatDateForUrl(config('websiteInfo')->updated_at) }}?v={{ formatDateForUrl(config('websiteInfo')->updated_at) }}" type="image/webp">
-                    <img src="{{ config('websiteInfo')->getImage('logoImage') }}?v={{ formatDateForUrl(config('websiteInfo')->updated_at) }}?v={{ formatDateForUrl(config('websiteInfo')->updated_at) }}" alt="{{ config('websiteInfo')->getWebsiteName() }}">
-                </picture> --}}
+                <img src="{{ config('website_info')->getImage("logo_image") }}" alt="{{ config('website_info')->getWebsiteName() }}">
             </div>
         </a>
 

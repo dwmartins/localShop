@@ -13,6 +13,9 @@
         'resources/css/bootstrap-overrides.css',
         'resources/css/selectize-overrides.css',
     ])
+
+    @yield('styles')
+    @stack('styles')
 </head>
 <body>
     <!-- Main Layout -->
