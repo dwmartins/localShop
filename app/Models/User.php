@@ -19,8 +19,17 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'last_name',
         'email',
-        'password',
+        'description',
+        'phone',
+        'date_of_birth',
+        'address',
+        'complement',
+        'city',
+        'zip_code',
+        'state',
+        'country',
     ];
 
     /**
@@ -33,6 +42,19 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+
+        if(empty($this->role)) {
+            $this->role = 'visitor';
+        }
+
+        if(empty($this->account_status)) {
+            $this->account_status = true;
+        }
+    }
+
     /**
      * Get the attributes that should be cast.
      *
@@ -44,5 +66,16 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Update last login date
+     */
+    public function updateLastLogin()
+    {
+        $this->timestamps = false;
+        $this->last_login_at = now();
+        $this->save();
+        $this->timestamps = true;
     }
 }
