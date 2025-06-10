@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    header
+    @include('components.public.header')
 
     <main class="container mt-4">
         @yield('main-content')
