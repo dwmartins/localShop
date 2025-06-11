@@ -41,5 +41,25 @@ class SettingsProvider extends ServiceProvider
         }
 
         Config::set('settings', $settings);
+
+        // Set the timezone (if found in the database, otherwise 'America/Sao_Paulo')
+        $this->setTimezone($settings);
+
+        // Set default date (if found in database)
+        $this->setDateFormat($settings);
+    }
+
+    private function setTimezone($settings) {
+        $timezone = $settings['timezone'] ?? 'America/Sao_Paulo';
+        Config::set('app.timezone', $timezone);
+
+        date_default_timezone_set($timezone);
+    }
+
+    private function setDateFormat($settings) {
+        $dateFormat = $settings['date_format'] ?? 'DD-MM-YYYY';
+        Config::set('app.date_format', $dateFormat);
+
+        Config::set('app.clock_type', $settings['clock_type']);
     }
 }

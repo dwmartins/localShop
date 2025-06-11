@@ -2,7 +2,7 @@
     <div class="container">
         <a href="/" class="navbar-brand">
             <div class="d-flex align-items-center logo_image">
-                <img src="{{ config('website_info')->getImage("logo_image") }}" alt="{{ config('website_info')->getWebsiteName() }}">
+                <img src="{{ config('website_info')->getImage("logo_image") }}?v={{ formatDateForUrl(config('website_info')->updated_at) }}" alt="{{ config('website_info')->getWebsiteName() }}">
             </div>
         </a>
 
@@ -44,7 +44,7 @@
 
                 <li class="nav-item">
                     <a href="/" class="nav-link">
-                        Inicio
+                        Início
                     </a>
                 </li>
                 <li class="nav-item">
