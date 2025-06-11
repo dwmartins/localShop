@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Document</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family={{ urlencode(config('website_customization')->font_family) }}:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- CSS Global -->
     @vite([
@@ -13,6 +14,8 @@
         'resources/css/bootstrap-overrides.css',
         'resources/css/selectize-overrides.css',
     ])
+
+    <x-configs.css-variables />
 
     @yield('styles')
     @stack('styles')
