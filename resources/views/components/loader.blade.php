@@ -1,0 +1,1 @@
+<div class="loader {{ $size }} {{ $color }} {{ $class }}"></div>
