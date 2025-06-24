@@ -16,6 +16,10 @@
     display: none;
 }
 
+.public_nav .logged_large {
+    display: flex;
+}
+
 @media screen and (max-width: 992px) {
     .public_nav .logged_small {
         display: flex;

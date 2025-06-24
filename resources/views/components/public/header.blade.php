@@ -40,6 +40,7 @@
                             </span>
                         </li>
                     </div>
+                    <hr>
                 @endauth
 
                 <li class="nav-item">
@@ -68,6 +69,12 @@
                 <li class="nav-item">
                     <a href="/" class="nav-link">
                         Contato
+                    </a>
+                </li>
+
+                <li class="nav-item d-lg-none">
+                    <a href="/" class="nav-link">
+                        Anunciar aqui
                     </a>
                 </li>
 
