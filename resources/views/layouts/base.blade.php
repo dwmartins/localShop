@@ -31,7 +31,8 @@
     </div>
 
     @vite([
-        'resources/js/app.js'
+        'resources/js/app.js',
+        'resources/js/helpers.js'
     ])
 
     <script>

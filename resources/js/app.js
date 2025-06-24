@@ -1,8 +1,13 @@
 import './bootstrap';
 import 'bootstrap';
-import './helpers';
+import { showAlert } from './helpers';
 
 document.addEventListener('DOMContentLoaded', function() {
+    // get the notifications if there are any
+    if (window.sessionMessage) {
+        showAlert(window.sessionMessage.type, window.sessionMessage.title, window.sessionMessage.fields);
+    }
+    
     // Click event to toggle password visibility and icon
     document.querySelectorAll('.icon_show_password').forEach(icon => {
         icon.addEventListener('click', function () {

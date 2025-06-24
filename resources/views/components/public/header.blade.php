@@ -74,7 +74,7 @@
                 @guest
                     <hr>
                     <li class="nav-item">
-                        <a href="" class="nav-link logged_small">
+                        <a href="{{ route('login') }}" class="nav-link logged_small">
                             Entrar
                         </a>
                     </li>
@@ -123,7 +123,7 @@
                         Anuncie aqui
                     </a>
 
-                    <a href="" class="btn btn-primary btn-sm fw-semibold rounded-1">
+                    <a href="{{ route('login') }}" class="btn btn-primary btn-sm fw-semibold rounded-1">
                         Entrar
                     </a>
                 </div>
